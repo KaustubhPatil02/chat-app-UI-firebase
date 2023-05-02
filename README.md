@@ -1,3 +1,5 @@
+This is just a basic UI made with react-html-scss no js functionality's are active at the moment in this repo, will update the sam in next with more usefull js functionality.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
