@@ -1,0 +1,355 @@
+// login and register page styling
+.formContainer {
+  background-color: rgb(73, 74, 75);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  //child of formcontainer
+  .formWrappeer {
+    background-color: white;
+    padding: 20px 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    .logo {
+      color: black;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .title {
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input {
+      padding: 15px;
+      border: none;
+      width: 280px;
+      border-bottom: 1px solid rgb(10, 10, 10);
+
+      &::placeholder {
+        color: rgb(175, 175, 175);
+      }
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lightblue;
+      }
+    }
+
+    p {
+      color: black;
+      font-size: 12px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: darkblue;
+      font-size: 12px;
+      cursor: pointer;
+
+      img {
+        width: 32px;
+      }
+    }
+  }
+}
+
+//home page styling
+.home {
+  background-color: rgb(73, 74, 75);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 65%;
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .sidebar {
+    flex: 1;
+    // border-right: 3px solid darkblue;
+    background-color: rgb(27, 26, 26);
+
+    .nav {
+      display: flex;
+      background-color: rgb(40, 40, 41);
+      height: 50px;
+      padding: 10px;
+      justify-content: space-between;
+      color: white;
+
+      .logo {
+        font-weight: bold;
+      }
+
+      .user {
+        display: flex;
+        gap: 10px;
+      }
+
+      img {
+        background-color: black;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      button {
+        background-color: gray;
+        color: white;
+        font-size: 12px;
+        border: none;
+        font-weight: bold;
+        border-radius: 13px;
+
+        cursor: pointer;
+
+        &:hover {
+          background-color: lightblue;
+        }
+      }
+    }
+
+    .search {
+      border-bottom: 1px solid gray;
+
+      .searchform {
+        padding: 10px;
+
+        input {
+          background-color: transparent;
+          border: none;
+          color: white;
+          outline: none;
+
+          &::placeholder {
+            color: grey;
+          }
+        }
+      }
+    }
+
+    .userChats {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+
+      &:hover {
+        color: black;
+      }
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: lightblue;
+      }
+
+      img {
+        width: 10;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .userChatInfo {
+        span {
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .chats {
+    flex: 2;
+
+    .chatsHistory {
+      height: 50px;
+      background-color: rgb(50, 49, 49);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      color: white;
+    }
+
+    .chatIcons {
+      display: flex;
+      gap: 10px;
+
+      img {
+        height: 24px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+
+    //   .messages{
+    //     background-color: lightblue ;
+    //     padding: 10px;
+    //     height: calc(100% - 160px)  
+
+    //      .message {
+    //        display: flex;
+    //        gap: 20px;
+    //      margin-bottom: 20px;
+    //   }
+    // }
+
+    .messages {
+      background-color: lightblue;
+      padding: 10px;
+      height: calc(100% - 160px);
+      overflow: scroll;
+
+      .message {
+        display: flex;
+        gap: 20px;
+
+        .messageInfo {
+          display: flex;
+          flex-direction: column;
+          color: gray;
+          font-weight: 300;
+          margin-bottom: 20px;
+
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+
+        .messageContent {
+          img {
+            max-width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 10px;
+
+          }
+
+
+
+          p {
+            background-color: white;
+            padding: 8px 20px;
+            border-radius: 0px 10px 10px 10px;
+            max-width: max-content;
+          }
+
+          img {
+            width: 50%;
+          }
+        }
+        &.owner {
+          flex-direction: row-reverse;
+  
+          .messageContent {
+            align-items: flex-end;
+  
+            p {
+              background-color: #8da4f1;
+              color: white;
+              border-radius: 10px 0px 10px 10px;
+            }
+          }
+        }
+      }
+
+    
+    }
+  }
+
+  .input {
+    background-color: white;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+
+
+    input {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      color: gray;
+
+      &::placeholder {
+        color: lightgrey;
+      }
+
+    }
+
+    .send {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    img {
+      height: 24px;
+      cursor: pointer;
+    }
+
+    button {
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      font-weight: bold;
+      background: rgb(53, 57, 58);
+      cursor: pointer;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+}
